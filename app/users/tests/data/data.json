@@ -1,0 +1,81 @@
+{
+  "cases": {
+    "user_create": {
+      "payload": {
+        "email": "example@ex.com",
+        "first_name": "Роке",
+        "last_name": "Алва",
+        "gender": "male",
+        "date_of_birth": "2000-06-16",
+        "password_1": "RockeAlva123!",
+        "password_2": "RockeAlva123!"
+      },
+      "want": {
+        "email": "example@ex.com",
+        "first_name": "Роке",
+        "last_name": "Алва",
+        "gender": "male",
+        "date_of_birth": "2000-06-16"
+      }
+    },
+    "user_get": {
+      "init": {
+        "user": {
+          "uuid": "fdef00a5-b7fb-4e6f-a850-9589cc725070",
+          "first_name": "Роке",
+          "last_name": "Алва",
+          "gender": "male",
+          "email": "example@ex.com",
+          "email_verified": true,
+          "hashed_password": "$2b$12$HCIa7/iT.0i4PALe2e37YOCTr8mEHjeecFT0UWqs06iWTps53PBk6"
+        }
+      },
+      "want": {
+        "email": "example@ex.com",
+        "first_name": "Роке",
+        "last_name": "Алва",
+        "gender": "male"
+      }
+    },
+    "user_patch": {
+      "init": {
+        "user": {
+          "uuid": "fdef00a5-b7fb-4e6f-a850-9589cc725070",
+          "first_name": "Роке",
+          "last_name": "Алва",
+          "gender": "male",
+          "email": "example@ex.com",
+          "email_verified": true,
+          "hashed_password": "$2b$12$HCIa7/iT.0i4PALe2e37YOCTr8mEHjeecFT0UWqs06iWTps53PBk6"
+        }
+      },
+      "payload": {
+        "first_name": "Ричард",
+        "last_name": "Окдел"
+      },
+      "want": {
+        "email": "example@ex.com",
+        "first_name": "Ричард",
+        "last_name": "Окдел",
+        "gender": "male"
+      }
+    },
+    "user_delete": {
+      "init": {
+        "user": {
+          "uuid": "fdef00a5-b7fb-4e6f-a850-9589cc725070",
+          "first_name": "Роке",
+          "last_name": "Алва",
+          "gender": "male",
+          "email": "example@ex.com",
+          "email_verified": true,
+          "hashed_password": "$2b$12$HCIa7/iT.0i4PALe2e37YOCTr8mEHjeecFT0UWqs06iWTps53PBk6"
+        }
+      },
+      "want": {
+        "status": true,
+        "message": "The user has been deleted!"
+      }
+    }
+  }
+}

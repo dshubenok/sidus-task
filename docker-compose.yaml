@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-backend
+      args:
+        ENV_FILE: alpha.env
+    env_file:
+      - alpha.env
+    ports:
+      - "8000:80"
+  celery-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile-celery
+      args:
+        ENV_FILE: alpha.env
+    env_file:
+      - alpha.env
