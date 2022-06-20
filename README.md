@@ -23,9 +23,12 @@ _Тестовое задание для бэкенд-разработчика Si
 
 ### Запуск
 
-1. Запустить БД: `docker run --name sidus_db -d -e POSTGRESQL_PASSWORD=userPass123 -e POSTGRESQL_USERNAME=admin_user -e POSTGRESQL_DATABASE=sidus_db -p 5437:5432 bitnami/postgresql:13`
-2. `docker-compose up`
-3. http://0.0.0.0:8000/docs
+1. Запустить БД: 
+```
+docker run --name sidus_db -d -e POSTGRESQL_PASSWORD=userPass123 -e POSTGRESQL_USERNAME=admin_user -e POSTGRESQL_DATABASE=sidus_db -p 5437:5432 bitnami/postgresql:13
+```
+3. `docker-compose up`
+4. http://0.0.0.0:8000/docs
 
 ### Замечания
 
